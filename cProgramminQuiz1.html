@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>C programming quiz</title>
+</head>
+<body>
+<script>
+var cnt=-1;
+icnt=(function(){
+ cnt=0;
+return function(){
+cnt++;
+}
+})();
+</script>
+
+<script>
+function fun1(valu)
+{
+let x=document.getElementById("1q");
+for(let i=1;i<x.children.length;i++)
+{
+let p=x.children[i];
+p.firstElementChild.disabled=true;
+}
+if(valu=="1a")
+icnt();
+switch(valu)
+{
+case "1a":document.getElementById("1qans").value="2";break;
+case "1b":document.getElementById("1qans").value="0";break;
+case "1c":document.getElementById("1qans").value="1";break;
+case "1d":document.getElementById("1qans").value="3";break;
+}
+//alert("your current score is: "+ cnt);
+}
+
+function fun2(valu)
+{
+let x=document.getElementById("2q");
+for(let i=1;i<x.children.length;i++)
+{
+let p=x.children[i];
+p.firstElementChild.disabled=true;
+}
+if(valu=="2d")
+icnt();
+switch(valu)
+{
+case "2a":document.getElementById("2qans").value="6";break;
+case "2b":document.getElementById("2qans").value="5";break;
+case "2c":document.getElementById("2qans").value="no output";break;
+case "2d":document.getElementById("2qans").value="compilation error";break;
+}
+//alert("your current score is: "+ cnt);
+}
+
+function fun3(valu)
+{
+let x=document.getElementById("3q");
+for(let i=1;i<x.children.length;i++)
+{
+let p=x.children[i];
+p.firstElementChild.disabled=true;
+}
+if(valu=="3d")
+icnt();
+switch(valu)
+{
+case "3a":document.getElementById("3qans").value="hello";break;
+case "3b":document.getElementById("3qans").value="hi";break;
+case "3c":document.getElementById("3qans").value="something went wrong";break;
+case "3d":document.getElementById("3qans").value="compilation error";break;
+}
+//alert("your current score is: "+ cnt);
+}
+
+function fun4(valu)
+{
+let x=document.getElementById("4q");
+for(let i=1;i<x.children.length;i++)
+{
+let p=x.children[i];
+p.firstElementChild.disabled=true;
+}
+if(valu=="4c")
+icnt();
+switch(valu)
+{
+case "4a":document.getElementById("4qans").value="&";break;
+case "4b":document.getElementById("4qans").value="|";break;
+case "4c":document.getElementById("4qans").value="&&";break;
+case "4d":document.getElementById("4qans").value="all of the above";break;
+}
+//alert("your current score is: "+ cnt);
+}
+
+function fun5(valu)
+{
+let x=document.getElementById("5q");
+for(let i=1;i<x.children.length;i++)
+{
+let p=x.children[i];
+p.firstElementChild.disabled=true;
+}
+if(valu=="5c")
+icnt();
+switch(valu)
+{
+case "5a":document.getElementById("5qans").value="pre";break;
+case "5b":document.getElementById("5qans").value="free";break;
+case "5c":document.getElementById("5qans").value="free()";break;
+case "5d":document.getElementById("5qans").value="free alloc()";break;
+}
+//alert("your current score is: "+ cnt);
+}
+</script>
+<h2 style="text-align:center">QUIZ ON C PROGRAMMING LANGUAGE</h2>
+<div id="1q">
+<p style="font-size:30px;background-color:yellow;color:tomato;font-family:monospace;font-style:bold;border-radius:20px;border:2px solid black">
+1. Value of c in code:i=1,c=++i is
+</p>
+<p><button id="1a" style="background-color:green;border:2px solid black" onclick=fun1(this.id)>2</button></p>
+<p><button id="1b" style="background-color:green;border:2px solid black" onclick=fun1(this.id)>0</button></p>
+<p><button id="1c" style="background-color:green;border:2px solid black" onclick=fun1(this.id)>1</button></p>
+<p><button id="1d" style="background-color:green;border:2px solid black" onclick=fun1(this.id)>3</button></p>
+</div>
+
+<div id="2q">
+<p style="font-size:30px;background-color:yellow;color:tomato;font-family:monospace;font-style:bold;border-radius:20px;border:2px solid black">
+2.What is the output of the following code snippet:
+#include<stdio.h>
+main()
+{
+const int a=5;
+a++;
+printf("%d",a);
+}
+</p>
+<p><button id="2a" style="background-color:green;border:2px solid black" onclick=fun2(this.id)>6</button></p>
+<p><button id="2b" style="background-color:green;border:2px solid black" onclick=fun2(this.id)>5</button></p>
+<p><button id="2c" style="background-color:green;border:2px solid black" onclick=fun2(this.id)>no output</button></p>
+<p><button id="2d" style="background-color:green;border:2px solid black" onclick=fun2(this.id)>compilation error</button></p>
+</div>
+
+<div id="3q">
+<p style="font-size:30px;background-color:yellow;color:tomato;font-family:monospace;font-style:bold;border-radius:20px;border:2px solid black">
+3.what is the output of the following program?
+#include<stdio.h>
+main()
+{
+float t=2;
+switch(t)
+{
+case 1:printf("hello");break;
+case 2:printf("hi");break;
+default:printf("something went wrong");break;
+}
+}
+</p>
+<p><button id="3a" style="background-color:green;border:2px solid black" onclick=fun3(this.id)>hello</button></p>
+<p><button id="3b" style="background-color:green;border:2px solid black" onclick=fun3(this.id)>hi</button></p>
+<p><button id="3c" style="background-color:green;border:2px solid black" onclick=fun3(this.id)>something went wrong</button></p>
+<p><button id="3d" style="background-color:green;border:2px solid black" onclick=fun3(this.id)>compilation error</button></p>
+</div>
+
+<div id="4q">
+<p style="font-size:30px;background-color:yellow;color:tomato;font-family:monospace;font-style:bold;border-radius:20px;border:2px solid black">
+4.which of the following is a logical operator
+</p>
+<p><button id="4a" style="background-color:green;border:2px solid black" onclick=fun4(this.id)>&</button></p>
+<p><button id="4b" style="background-color:green;border:2px solid black" onclick=fun4(this.id)>|</button></p>
+<p><button id="4c" style="background-color:green;border:2px solid black" onclick=fun4(this.id)>&&</button></p>
+<p><button id="4d" style="background-color:green;border:2px solid black" onclick=fun4(this.id)>all of the above</button></p>
+</div>
+
+<div id="5q">
+<p style="font-size:30px;background-color:yellow;color:tomato;font-family:monospace;font-style:bold;border-radius:20px;border:2px solid black">
+5. Which of the following function is used to free the dynamically allocated memory:
+</p>
+<p><button id="5a" style="background-color:green;border:2px solid black" onclick=fun5(this.id)>pre()</button></p>
+<p><button id="5b" style="background-color:green;border:2px solid black" onclick=fun5(this.id)>free</button></p>
+<p><button id="5c" style="background-color:green;border:2px solid black" onclick=fun5(this.id)>free()</button></p>
+<p><button id="5d" style="background-color:green;border:2px solid black" onclick=fun5(this.id)>free alloc()</button></p>
+</div>
+<form action="Analysis.php" method="post">
+<input type="text" value="" name="1qans" id="1qans" style="display:none">
+<input type="text" value="" name="2qans" id="2qans" style="display:none">
+<input type="text" value="" name="3qans" id="3qans" style="display:none">
+<input type="text" value="" name="4qans" id="4qans" style="display:none">
+<input type="text" value="" name="5qans" id="5qans" style="display:none">
+<input type="text" value="" name="fscr" id="fscr" style="display:none">
+<p style="text-align:center"><input type="submit" value="SUBMIT TEST" style="background-color:green;font-size:25px;font-style:bold;text-align:center"></p>
+</form>
+
+</body>
+</html>
